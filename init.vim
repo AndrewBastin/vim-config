@@ -2,14 +2,16 @@
 " Plugins (vim-plug)
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-let g:coc_global_extensions = ['coc-vetur', 'coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-ccls', 'coc-json', 'coc-yank', 'coc-prettier']
+Plug 'neoclide/coc.nvim', {'do': 'npm install --frozen-lockfile'}
+let g:coc_global_extensions = ['coc-vetur', 'coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier', 'coc-python']
 
 Plug 'ianks/vim-tsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'dikiaap/minimalist'
+Plug 'AndrewBastin/onedark.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'joshdick/onedark.vim'
+Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
@@ -89,21 +91,38 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+set cursorline
 
 
 " Airline Configs
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 
 
 " Coloring
 syntax on
 colorscheme onedark
-
+highlight CursorLine ctermbg=233 
 
 " Overiding onedark grey background
 highlight Normal ctermbg=black
 
-
 " FileType bindings
 au BufNewFile,BufRead *.ts setlocal filetype=typescript
 au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
+
+" Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
+
+" Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P

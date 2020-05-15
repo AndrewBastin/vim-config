@@ -10,5 +10,7 @@
          			}
        			}
     		}
-	}
+	},
+	"vetur.dev.vlsPath": "/usr/local/lib/node_modules/vls/",
+	"python.jediEnabled": false
 }
