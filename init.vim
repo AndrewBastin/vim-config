@@ -7,7 +7,6 @@ let g:coc_global_extensions = ['coc-vetur', 'coc-tslint-plugin', 'coc-tsserver',
 
 Plug 'ianks/vim-tsx'
 Plug 'leafgarland/typescript-vim'
-Plug 'dikiaap/minimalist'
 Plug 'AndrewBastin/onedark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
