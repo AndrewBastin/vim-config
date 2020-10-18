@@ -25,6 +25,10 @@ Plug 'posva/vim-vue'
 Plug 'tpope/vim-sleuth'
 Plug 'romgrk/winteract.vim'
 Plug 'yuttie/comfortable-motion.vim'
+Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'pantharshit00/vim-prisma'
+Plug 'prettier/vim-prettier'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
@@ -52,6 +56,7 @@ tnoremap <C-Up> <C-\><C-n><C-W>k
 tnoremap <C-Down> <C-\><C-n><C-W>j
 tnoremap <C-Left> <C-\><C-n><C-W>h
 tnoremap <C-Right> <C-\><C-n><C-W>l
+tnoremap <leader>tt <C-\><C-n> :FloatermToggle<CR>
 
 " COC jumps
 function! s:show_documentation()
@@ -82,6 +87,11 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+nmap <leader>tn :FloatermNew fish<CR>
+nmap <leader>tt :FloatermToggle<CR>
+nmap <leader>tp :FloatermNext<CR>
+nmap <leader>to :FloatermPrev<CR>
+
 
 " Configs
 set number relativenumber
@@ -110,6 +120,7 @@ highlight CursorLine ctermbg=233
 
 " Overiding onedark grey background
 highlight Normal ctermbg=black
+highlight FloatermBorder ctermbg=black ctermfg=202
 
 " FileType bindings
 au BufNewFile,BufRead *.ts setlocal filetype=typescript
