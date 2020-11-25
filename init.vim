@@ -35,15 +35,22 @@ call plug#end()
 " Autocmds
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+" Custom commands
+command Config execute "e ~/.config/nvim/init.vim"
+
 " Keybindings
 map <C-\> :NERDTreeToggle <CR>
-map <C-P> :Files <CR>
+map <C-P> :GFiles <CR>
 map <C-]> :TagbarToggle <CR>
 map <C-L> :CocFix <CR>
 map <C-S> :CocList<Space>symbols <CR>
 map <C-G> :Git <CR>
-map <C-F> :Rg <CR>
 map <C-T> :term <CR>
+
+nmap ?? :Rg <CR>
+nmap \\ :BLines <CR>
+nmap \. :CocList<Space>outline <CR>
+nmap \? :BCommits <CR>
 
 nmap <C-Up> <C-W>k
 nmap <C-Down> <C-W>j
@@ -57,6 +64,10 @@ tnoremap <C-Down> <C-\><C-n><C-W>j
 tnoremap <C-Left> <C-\><C-n><C-W>h
 tnoremap <C-Right> <C-\><C-n><C-W>l
 tnoremap <leader>tt <C-\><C-n> :FloatermToggle<CR>
+tnoremap <leader>tn <C-\><C-n> :FloatermNew fish<CR>
+tnoremap <leader>tt <C-\><C-n> :FloatermToggle<CR>
+tnoremap <leader>tp <C-\><C-n> :FloatermNext<CR>
+tnoremap <leader>to <C-\><C-n> :FloatermPrev<CR>
 
 " COC jumps
 function! s:show_documentation()
@@ -111,6 +122,9 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
+
+" Neovide Configs
+let g:neovide_fullscreen=v:true
 
 
 " Coloring
