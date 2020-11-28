@@ -98,12 +98,6 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-nmap <leader>tn :FloatermNew fish<CR>
-nmap <leader>tt :FloatermToggle<CR>
-nmap <leader>tp :FloatermNext<CR>
-nmap <leader>to :FloatermPrev<CR>
-
-
 " Configs
 set number relativenumber
 set nu rnu
@@ -114,6 +108,13 @@ set softtabstop=2
 set shiftwidth=2
 set cursorline
 
+" Floaterm configs
+let g:floaterm_shell = "fish"
+let g:floaterm_title = "terminal ($1/$2)"
+let g:floaterm_keymap_new = "<Leader>tn"
+let g:floaterm_keymap_prev = "<Leader>to"
+let g:floaterm_keymap_next = "<Leader>tp"
+let g:floaterm_keymap_toggle =  "<Leader>tt"
 
 " Airline Configs
 let g:airline#extensions#whitespace#enabled = 0
