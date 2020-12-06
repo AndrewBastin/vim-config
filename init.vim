@@ -29,6 +29,7 @@ Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'pantharshit00/vim-prisma'
 Plug 'prettier/vim-prettier'
 Plug 'voldikss/vim-floaterm'
+Plug 'wakatime/vim-wakatime'
 
 call plug#end()
 
