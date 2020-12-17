@@ -60,10 +60,6 @@ nmap <C-Right> <C-W>l
 nmap <leader>w :InteractiveWindow<CR>
 
 " Switching splits when focused on terminal
-tnoremap <C-Up> <C-\><C-n><C-W>k
-tnoremap <C-Down> <C-\><C-n><C-W>j
-tnoremap <C-Left> <C-\><C-n><C-W>h
-tnoremap <C-Right> <C-\><C-n><C-W>l
 tnoremap <leader>tt <C-\><C-n> :FloatermToggle<CR>
 tnoremap <leader>tn <C-\><C-n> :FloatermNew fish<CR>
 tnoremap <leader>tt <C-\><C-n> :FloatermToggle<CR>
